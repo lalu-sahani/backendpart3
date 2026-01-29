@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; background:#f4f4f4; }
+        .calculator { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); width: 320px; }
+        .display { height: 48px; background:#222; color:#fff; font-size:1.4rem; text-align:right; padding:8px 12px; border-radius:4px; margin-bottom:10px; overflow:hidden; }
+        .keys { display:grid; grid-template-columns: repeat(4, 1fr); gap:8px; }
+        button { padding:18px 6px; font-size:1.1rem; border: none; border-radius:6px; cursor:pointer; }
+        button.op { background:#f0ad4e; color:#fff; }
+        button.func { background:#d9534f; color:#fff; }
+        button.num { background:#e9ecef; }
+        .wide { grid-column: span 2; }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div id="display" class="display">0</div>
+        <div class="keys">
+            <button class="func" data-action="clear">C</button>
+            <button class="func" data-action="back">⌫</button>
+            <button class="op" data-value="%">%</button>
+            <button class="op" data-value="/">÷</button>
+
+            <button class="num" data-value="7">7</button>
+            <button class="num" data-value="8">8</button>
+            <button class="num" data-value="9">9</button>
+            <button class="op" data-value="*">×</button>
+
+            <button class="num" data-value="4">4</button>
+            <button class="num" data-value="5">5</button>
+            <button class="num" data-value="6">6</button>
+            <button class="op" data-value="-">−</button>
+
+            <button class="num" data-value="1">1</button>
+            <button class="num" data-value="2">2</button>
+            <button class="num" data-value="3">3</button>
+            <button class="op" data-value="+">+</button>
+
+            <button class="num wide" data-value="0">0</button>
+            <button class="num" data-value=".">.</button>
+            <button class="op" data-action="equals">=</button>
+        </div>
+    </div>
+
+    <script src="/calculator.js"></script>
+</body>
+</html>
